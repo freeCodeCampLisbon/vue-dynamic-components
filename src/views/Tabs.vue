@@ -72,7 +72,7 @@ export default {
   color: lightgray;
   transition: all 0.5s ease-in-out;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
   opacity: 0.5;
 }
