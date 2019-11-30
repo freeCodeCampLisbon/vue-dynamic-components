@@ -1,22 +1,5 @@
 <template>
-  <div class="tabs">
-    <div class="tabs-header">
-      <div
-        class="tabs-header__tab"
-        :class="{ 'tabs-header__tab--active': tab.component === active }"
-        v-for="tab in tabs"
-        :key="tab.name"
-        v-text="tab.name"
-        @click="active = tab.component"
-      />
-    </div>
-    <div class="tabs-main">
-      <transition name="slide-fade" mode="out-in">
-        <component v-if="active in $options.components" :is="active" />
-        <h1 v-else>Component not found</h1>
-      </transition>
-    </div>
-  </div>
+  <div class="tabs"></div>
 </template>
 <script>
 import profile from "../components/Tabs/Profile";
@@ -27,23 +10,7 @@ export default {
     about
   },
   data() {
-    return {
-      active: "profile",
-      tabs: [
-        {
-          name: "Profile",
-          component: "profile"
-        },
-        {
-          name: "About",
-          component: "about"
-        },
-        {
-          name: "Contacts",
-          component: "contacts"
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>

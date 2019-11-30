@@ -1,15 +1,7 @@
 <template>
   <div class="route-tabs">
     <div class="side-nav">
-      <div class="side-nav__list">
-        <router-link
-          class="side-nav__list-link"
-          v-for="route in routes"
-          :key="route.name"
-          :to="`/route-tabs/${route.to}`"
-          v-text="route.name"
-        />
-      </div>
+      <div class="side-nav__list"></div>
     </div>
     <div class="route-tabs__main">
       <transition name="fade" mode="out-in">
@@ -22,18 +14,7 @@
 export default {
   components: {},
   data() {
-    return {
-      routes: [
-        {
-          name: "Products",
-          to: "products"
-        },
-        {
-          name: "Clients",
-          to: "clients"
-        }
-      ]
-    };
+    return {};
   },
   methods: {}
 };
